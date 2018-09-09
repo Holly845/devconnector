@@ -4,9 +4,9 @@ I created this repository to help debug an issue I reported on [StackOverflow](h
 
 # Requirments
 
-node v8.11.1
-MongoDB shell version v4.0.1
-MongoDB server version: 4.0.1
+ - node v8.11.1
+ - MongoDB shell version v4.0.1
+ - MongoDB server version: 4.0.1
 
 # Installation
 
@@ -23,7 +23,7 @@ To reproduce this issue you need to first install and setup MongoDB and then Nod
 
 ## Install Nodejs app from this Repository
 
-Follow
+Enter the command below into your terminal to download the repository from github, install and launch it.
 
 ```bash
 git clone https://github.com/bradtraversy/devconnector.git
@@ -31,6 +31,7 @@ cd devconnector
 npm install
 npm run debug
 ```
+You should now be able to reproduce the issue.
 
 # Reproducing the issue
 
@@ -52,4 +53,4 @@ fetch("http://localhost:5000/api/users/register", {
   .then(json => console.log(json));
 ```
 
-If you use the nodeJS debugger you will see that the code does not execute line 29 of routes/api/users.js.
+If you use the nodeJS debugger you will see that the code does not execute line 29 of [routes/api/users.js](https://github.com/Holly845/devconnector/blob/master/routes/api/users.js).
